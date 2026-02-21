@@ -8,6 +8,7 @@ import { Twitter, Linkedin, Github, Mail, Zap } from "lucide-react";
 import Image from "next/image";
 import { ClerkProvider } from "@clerk/nextjs";
 import SmoothScroll from "../components/SmoothScroll";
+import { Analytics } from "@vercel/analytics/next"
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -82,6 +83,7 @@ export default function RootLayout({
             creatorUrl="https://getlinea.app"
             brandIcon={<Image src="/assets/linea-light.svg" alt="Linea Logo" className="w-8 sm:w-10 md:w-14 h-8 sm:h-10 md:h-14 text-background drop-shadow-lg" width={56} height={56} />}
           />
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
